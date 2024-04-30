@@ -26,9 +26,31 @@ let peeps = [
 ];
 console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
-
+//the function take input an array of object as arg
+//in the input object has a key as scorer
+//and value as a number of the scoreer
+// the main function return a count object 
+//where the key as scorer
+//and value as thier total score
 function countScores(people) {
   // Your code here 
+  let count = {}
+  for(let i =  0; i < people.length; i++){
+    //here each element is a object
+    let el = people[i];
+    let name = el.name;
+   
+    let val = el.score
+   
+    if(count[name]){
+      count[name] +=val
+    }
+   else{
+    count[name] = val
+  } 
+
+  }
+  return count
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

@@ -23,7 +23,16 @@ console.log(smoothie2("pineapple"));
 ***********************************************************************/
 
 // Your code here 
+function smoothieMachine(...ingreone){
+  let newingr = [...ingreone];
+  return function(...ingretwo){
+      newingr.push(...ingretwo);
+      const ingrList = newingr.join(' and ');
+     return `I'm having a smoothie with ${ingrList}`  
 
+
+  }
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = smoothieMachine;

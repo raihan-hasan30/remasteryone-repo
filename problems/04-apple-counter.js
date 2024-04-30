@@ -6,7 +6,11 @@ function will be in charge of returning the number of keys that contain the word
 
 **Hint**: you may want to take all the keys and lower case them for easier
 searching.
-
+//take a object as parameter
+//every object has key-value pairs
+//need to check the the if the key has the word apple or not
+//if the key has the word 'apple' the function  return the number
+//of the the key that contains the word 'apple' 
 
 Example:
 let obj = { banana: "yay!" };
@@ -29,7 +33,16 @@ appleCounter(obj3); // => 3
 ***********************************************************************/
 
 function appleCounter(appleObj) {
-  // Your code here 
+    let count = 0;
+   let objElAsArray = Object.keys(appleObj);
+   for(let i = 0; i < objElAsArray.length; i++){
+      let stringEl = objElAsArray[i];
+      if(stringEl.toLowerCase().includes('apple')){
+        count=count+1
+      }
+
+   }
+   return count
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

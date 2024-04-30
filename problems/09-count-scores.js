@@ -46,12 +46,11 @@ function countScores(people) {
       count[name] +=val
     }
    else{
-    count[name] = val
-  } 
+    count[name] = val} 
 
   }
   return count
-}
+}``
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = countScores;
